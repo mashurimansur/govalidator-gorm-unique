@@ -118,3 +118,6 @@ Send request to the server using curl or postman: `curl GET "http://localhost:90
     }
 }
 ```
+
+## **License**
+The **go-unique-validator** is an open-source software licensed under the [MIT License](LICENSE.md).
