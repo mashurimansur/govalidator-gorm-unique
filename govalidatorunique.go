@@ -21,7 +21,6 @@ func (r *UniqueRule) Rule(field string, rule string, message string, value inter
 
 	query := `SELECT COUNT(*) as total FROM %s WHERE %s = $1`
 	params := strings.Split(strings.TrimPrefix(rule, fmt.Sprintf("%s:", r.ruleName)), ",")
-	fmt.Println(params)
 
 	if len(params) == 2 {
 		query = fmt.Sprintf(query, params[0], params[1])
