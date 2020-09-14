@@ -1,6 +1,6 @@
 # govalidator-gorm-unique
 
-Unique validator extensions for [thedevsaddam/govalidator](https://github.com/thedevsaddam/govalidator). Inspired by Laravel's unique validation rule.
+Unique validator extensions for [thedevsaddam/govalidator](https://github.com/thedevsaddam/govalidator). Inspired by Laravel's unique validation rule & [go-unique-validator](https://github.com/ramadani/go-unique-validator).
 
 ## Installation
 
@@ -61,13 +61,13 @@ rules := govalidator.MapData{
 package main
 
 import (
-	"database/sql"
 	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
 
-	_ "github.com/go-sql-driver/mysql"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	uniquevalidator "github.com/mashurimansur/govalidator-gorm-unique"
 	"github.com/thedevsaddam/govalidator"
 )
@@ -90,7 +90,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	db, err := sql.Open("mysql", "username:password@tcp(127.0.0.1:3306)/dbname?parseTime=true")
+	db, err := gorm.Open("mysql", "username:password@tcp(127.0.0.1:3306)/dbname?parseTime=true")
 	if err != nil {
 		log.Fatal(err)
 	}
