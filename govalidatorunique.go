@@ -35,7 +35,6 @@ func (r *UniqueRule) Rule(field string, rule string, message string, value inter
 	}
 
 	queryRow.Count(&total)
-	fmt.Println(total)
 
 	if total > 0 {
 		if message != "" {
