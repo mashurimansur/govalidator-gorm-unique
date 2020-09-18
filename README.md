@@ -1,6 +1,6 @@
 # govalidator-gorm-unique
 
-Unique validator extensions for [thedevsaddam/govalidator](https://github.com/thedevsaddam/govalidator). Inspired by Laravel's unique validation rule & [go-unique-validator](https://github.com/ramadani/go-unique-validator).
+Unique validator extensions for [thedevsaddam/govalidator](https://github.com/thedevsaddam/govalidator). Inspired by Laravel's unique validation rule
 
 ## Installation
 
