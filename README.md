@@ -21,7 +21,7 @@ import uniquevalidator "github.com/mashurimansur/govalidator-gorm-unique"
 Create db instance
 
 ```go
-db, err := sql.Open("mysql", "username:password@tcp(127.0.0.1:3306)/dbname?parseTime=true")
+db, err := gorm.Open("mysql", "username:password@tcp(127.0.0.1:3306)/dbname?parseTime=true")
 if err != nil {
   log.Fatal(err)
 }
