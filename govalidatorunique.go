@@ -26,7 +26,7 @@ func (r *UniqueRule) Rule(field string, rule string, message string, value inter
 		query = fmt.Sprintf(query, params[0], params[1])
 		queryRow = r.db.Raw(query, value)
 	} else if len(params) == 4 {
-		query += ` AND %s != ?`
+		query += ` AND %s != $2`
 		query = fmt.Sprintf(query, params[0], params[1], params[2])
 		queryRow = r.db.Raw(query, value, params[3])
 	} else {
